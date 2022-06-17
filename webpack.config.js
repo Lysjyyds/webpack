@@ -14,9 +14,9 @@ module.exports = {
       filename: "index.html",
     }),
   ],
-  devServer:{
-      open:true,
-      port: 30000,
+  devServer: {
+    open: true,
+    port: 30000,
   },
   module: {
     rules: [
@@ -35,18 +35,23 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|jpeg)$/i,
-        type: 'asset',
+        type: "asset",
         generator: {
-          filename:'images/[hash:6][ext]'
-        }
+          filename: "images/[hash:6][ext]",
+        },
       },
-      { // webpack5默认内部不认识这些文件, 所以当做静态资源直接输出即可
+      {
+        // webpack5默认内部不认识这些文件, 所以当做静态资源直接输出即可
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-            filename: 'fonts/[hash:6][ext]'
-        }
-    }
+          filename: "fonts/[hash:6][ext]",
+        },
+      },
+      {
+        test: /\.js$/i,
+        use: ["babel-loader"],
+      },
     ],
   },
 };
