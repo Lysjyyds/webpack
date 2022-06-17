@@ -19,4 +19,6 @@ document.body.appendChild(png)
 // 引入字体图标文件
 import './assets/fonts/iconfont.css'
 
+import app from "./app.vue"
+
 
