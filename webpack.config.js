@@ -40,6 +40,13 @@ module.exports = {
           filename:'images/[hash:6][ext]'
         }
       },
+      { // webpack5默认内部不认识这些文件, 所以当做静态资源直接输出即可
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: 'fonts/[hash:6][ext]'
+        }
+    }
     ],
   },
 };

@@ -16,5 +16,7 @@ png.src = pngSrc
 //4.插入节点
 document.body.appendChild(gif)
 document.body.appendChild(png)
+// 引入字体图标文件
+import './assets/fonts/iconfont.css'
 
 
