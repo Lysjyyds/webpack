@@ -1,3 +1,7 @@
 import  { marquee } from './marquee.js'
-import  { table } from './tab.js'
+import  { tab } from './tab.js'
+
+tab();
+marquee();
+
 
